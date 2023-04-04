@@ -8,7 +8,7 @@
 body {
     color: #32312d;
     font-weight: 400;
-    font-size: 1.4vw;
+    font-size: 18px;
     font-family: 'SoDo Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
     line-height: 1.5;
 
@@ -45,6 +45,7 @@ header {
 
     position: fixed;
     top: 0;
+    z-index: 99999;
 }
 
 header .logo {
@@ -80,10 +81,22 @@ header nav ul li {
     justify-content: center;
     align-items: center;
 
+    width: fit-content;
+
     text-transform: uppercase;
 
     cursor: pointer;
     user-select: none;
+}
+
+header nav ul li a {
+
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul li a:hover{
+    color: green;
 }
 
 
@@ -107,6 +120,8 @@ header nav ul li {
     color: var(--black);
 
     transition: all .2s ease;
+
+    
 
 
 }
@@ -148,6 +163,11 @@ header nav ul li {
     align-items: center;
 
     width: 700px;
+}
+
+.header-2 a {
+    text-decoration: none;
+    color: var(--black);
 }
 
 .header-2 .img-responsive {
@@ -196,6 +216,13 @@ main {
 
     text-align: center;
 
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Container.transparent {
+    background-color: transparent;
 }
 
 .Container .txt {
@@ -203,18 +230,15 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
-.Container.flex {
-    display: flex;
-    justify-content: space-between;
-}
 
-.Container.flex p {
+.Container p {
     font-size: 17px;
 }
 
-.Container.flex img {
+.Container img {
     width: 50%;
     margin: 0;
 }
@@ -229,13 +253,17 @@ footer {
     background: var(--Header-Footer_bg);
     box-shadow: var(--Header-Footer_shadow);
 
-    height: fit-content;
+    height: 100%;
 
     border-top: 1px solid var(--footer_border_color);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    padding-bottom: 20px;
+
+    width: 100%;
 }
 
 footer ul {
@@ -267,6 +295,11 @@ footer .infos {
 
 }
 
+footer .infos ul {
+    margin: 0;
+    margin-left: 60px;
+}
+
 footer .icons {
     display: flex;
     margin-bottom: 20px;
@@ -284,4 +317,30 @@ footer .politicas {
 
 footer .o {
     font-size: 10px;
+}
+
+footer hr {
+    width: 75%;
+}
+
+
+/* Responsivdade */
+@media (max-width:650px){
+    .Container {
+        flex-direction: column;
+    }
+
+    .Container img {
+        width: 100%;
+        height: 25%;
+    }
+
+    .Container .txt {
+        width: 100%;
+        height: 25%; 
+    }
+
+    footer {
+        width: 250%;
+    }
 }
