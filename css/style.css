@@ -210,15 +210,16 @@ main {
     justify-content: space-between;
 }
 
-.Container.flex p{
+.Container.flex p {
     font-size: 17px;
-}   
-.Container.flex img{
-    width: 50%;
-    margin:0;
 }
 
-.Container.nopadding{
+.Container.flex img {
+    width: 50%;
+    margin: 0;
+}
+
+.Container.nopadding {
     padding: 0;
 }
 
@@ -237,10 +238,22 @@ footer {
     justify-content: center;
 }
 
-footer ul {list-style-type: none; }
-footer ul.flex {display: flex;}
-footer ul.flex li {margin-left:20px ;}
-footer ul li {font-size: 14px; margin-top: 10px;}
+footer ul {
+    list-style-type: none;
+}
+
+footer ul.flex {
+    display: flex;
+}
+
+footer ul.flex li {
+    margin-left: 20px;
+}
+
+footer ul li {
+    font-size: 14px;
+    margin-top: 10px;
+}
 
 footer .infos {
     height: fit-content;
@@ -254,9 +267,21 @@ footer .infos {
 
 }
 
-footer .icons {display: flex;margin-bottom: 20px;user-select: none; cursor: pointer;}
-footer .icons li {margin-left: 20px;}
+footer .icons {
+    display: flex;
+    margin-bottom: 20px;
+    user-select: none;
+    cursor: pointer;
+}
 
-footer .politicas {margin-bottom: 20px;}
-    
-footer .o {font-size: 10px;}
+footer .icons li {
+    margin-left: 20px;
+}
+
+footer .politicas {
+    margin-bottom: 20px;
+}
+
+footer .o {
+    font-size: 10px;
+}
