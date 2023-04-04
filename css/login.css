@@ -1,0 +1,323 @@
+* {
+    /* Css reset, remover estilo padrão do navegador */
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #32312d;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'SoDo Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+
+}
+
+html {height: 100%;}
+
+:root {
+    --Header-Footer_bg: #F8F8FF;
+    --Header-Footer_shadow: 10px 10px 15px -7px rgba(0, 0, 0, 0.75);
+
+    --Container_bg: rgb(152, 246, 207);
+    --Nav_Hover: green;
+
+    /* button colors */
+
+    --white: white;
+    --black: black;
+
+    /* footer border */
+    --footer_border_color: rgb(79, 79, 79);
+
+    /* test */
+    --testbg: pink ;
+}
+
+/* Header */
+
+header {
+    background: var(--Header-Footer_bg);
+    height: 100px;
+    width: 100%;
+
+    box-shadow: var(--Header-Footer_shadow);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .logo {
+    height: 70px;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+
+/* navigation */
+
+header nav {
+    margin-top: 35px;
+    display: flex;
+    height: 100%;
+}
+
+header nav ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style-type: none;
+    height: 100%;
+}
+
+header nav ul li {
+    margin-right: 20px;
+    margin-bottom: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+header nav ul li a {
+
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul li a:hover{
+    color: green;
+}
+
+
+/* Defaut button */
+.button {
+    border: 1px solid var(--black);
+    border-radius: 50px;
+    box-shadow: none;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 7px 16px;
+    background: var(--white);
+
+    margin-left: 20px;
+    transform: scale(1);
+    cursor: pointer;
+
+    text-decoration: none;
+    color: var(--black);
+
+    transition: all .2s ease;
+
+    
+
+
+}
+
+.button.transparent {
+    background: transparent;
+}
+
+.button.VD {
+    background: #00a862;;
+    color: white;
+    border: none;
+}
+
+.button.black {
+    color: var(--white);
+    background: var(--black);
+}
+
+.button:hover {
+    transform: scale(0.8);
+    box-shadow: 10px 10px 15px -7px rgba(0, 0, 0, 0.75);
+}
+
+.button.margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Defaut margins */
+
+.Margin-top {
+    margin-top: 20px;
+}
+
+.Margin-bottom {
+    margin-bottom: 20px;
+}
+
+
+/* header 2 */
+.header-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 700px;
+}
+
+.header-2 a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.header-2 .img-responsive {
+    width: 15%;
+    margin-right: 20px;
+}
+
+.header-2 .findstore p {
+    margin-left: 5px;
+}
+
+.header-2 .findstore {
+    display: flex;
+    cursor: pointer;
+}
+
+
+/* Animations */
+
+header nav ul li:hover {
+    color: green;
+}
+
+.header-2 .findstore:hover {
+    color: var(--Nav_Hover);
+}
+
+
+/* LOGIN */
+
+main {
+    width: 100%;
+    height: 100%;
+
+    background: var(--testbg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Left , .Right {
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Left {background: var(--white); width: 40%; font-size: 30px; font-weight: bold;}
+
+.top {
+    background: black;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.down {
+    width: 345px;
+    height: 358px;
+
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+/* login */
+
+.Right .Login {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    width: 345px;
+    height: 352px;
+
+    padding-top: 100px;
+    padding-bottom: 32px;
+}
+.Right h4 {
+    color: #00a862;
+}
+
+.Right .Login .Input {
+    height: 40px;
+    width: 100%;
+
+    border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+
+/*  */
+
+.Right .Login .PlaceHolder {
+    font-size: 12px;
+    width: 40px;
+    margin: 0;
+
+    position: relative;
+
+    top: -30px;
+
+    transition: all .5s;
+}
+.Right .Login .Input:focus,
+.Right .Login .Input:focus + .PlaceHolder {
+    top: -60px;
+    border-color: #00a862;
+}
+.Right .Login .Input:not(:placeholder-shown),
+.Right .Login .Input:not(:placeholder-shown) + .PlaceHolder {
+    top: -60px;
+    border-color: #00a862;
+
+}
+
+.Right .Login .button {
+    margin: 0;
+    margin-left:70%;
+}
+
+.Right .Login .Item {
+    margin-top:  30px;
+}
+
+.Right .down h3 {
+    margin-bottom: 10px;
+}
+
+.Right .down p {
+    font-size: 16px;
+}
+
+
